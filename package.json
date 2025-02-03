@@ -1,0 +1,23 @@
+{
+  "name": "qa-challenge-playwright",
+  "version": "1.0.0",
+  "description": "Este repositório contém dois testes práticos para a vaga de **QA Engineer**. O objetivo é validar suas habilidades de automação de testes com:\r 1. **Validação de fluxos de UI** com **Playwright**.\r 2. **Interação e validação de APIs** com **Playwright** e **Node.js**.",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GuiiHtto/qa-challenge-playwright.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/GuiiHtto/qa-challenge-playwright/issues"
+  },
+  "homepage": "https://github.com/GuiiHtto/qa-challenge-playwright#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.50.1",
+    "@types/node": "^22.13.0"
+  }
+}

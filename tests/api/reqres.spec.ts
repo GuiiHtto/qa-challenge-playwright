@@ -1,3 +1,4 @@
+import { test } from '@playwright/test';
 import axios from 'axios';
 import { expect } from 'chai';
 
@@ -17,8 +18,8 @@ interface ApiResponse {
   total_pages: number;
 }
 
-describe('ReqRes API Tests', () => {
-  it('should fetch users and validate the response', async () => {
+test.describe('ReqRes API Tests', () => {
+  test('should fetch users and validate the response', async () => {
     const response = await axios.get<ApiResponse>('https://reqres.in/api/users?page=2');
     const responseData = response.data;
 

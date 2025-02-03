@@ -1,4 +1,3 @@
-// @ts-check
 import { test, expect } from '@playwright/test';
 
 test('Swag Labs login test', async ({ page }) => {
@@ -39,6 +38,21 @@ test('Swag Labs login failure test', async ({ page }) => {
 
     // Verify that an error message is displayed
     await expect(page.locator('.error-message-container')).toBeVisible();
+    
+    // Enter empty username
+    await page.fill('#user-name', '');
+
+    // Enter empty password
+    await page.fill('#password', '');
+
+    // Click the login button
+    await page.click('#login-button');
+
+    // Verify that an error message is displayed
+    await expect(page.locator('.error-message-container')).toBeVisible();
+
+    // Verify that the error message contains the expected text
+    await expect(page.locator('.error-message-container')).toHaveText('Epic sadface: Username is required');
 });
 
 test('Swag Labs add items to cart test', async ({ page }) => {
